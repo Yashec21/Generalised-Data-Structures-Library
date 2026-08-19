@@ -130,8 +130,9 @@ Through this project, I gained practical experience in:
 * Add CMake build support
 * Improve documentation and examples
 
-## Author
+Author
 
-**Yash Patil**
+Yash Patil
 
-GitHub: [Your GitHub Profile](https://github.com/YourUsername)
+GitHub: Yashec21
+LinkedIn: yashpatilec
