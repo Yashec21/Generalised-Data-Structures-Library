@@ -53,7 +53,7 @@ g++ --version
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/YourUsername/Generalised-Data-Structures-Library.git
+git clone https://github.com/Yashec21/Generalised-Data-Structures-Library.git
 ```
 
 ### Navigate to the Project
@@ -130,9 +130,10 @@ Through this project, I gained practical experience in:
 * Add CMake build support
 * Improve documentation and examples
 
-Author
+## Author
 
-Yash Patil
+**Yash Patil**
 
-GitHub: Yashec21
-LinkedIn: yashpatilec
+GitHub: [Yashec21](https://github.com/Yashec21)
+
+LinkedIn: [Yash Patil](https://www.linkedin.com/in/yashpatilec/)
