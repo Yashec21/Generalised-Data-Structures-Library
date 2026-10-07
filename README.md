@@ -1,139 +1,362 @@
 # Generalised Data Structures Library
 
-A C++ library that implements commonly used linear data structures using object-oriented programming concepts. The project focuses on understanding data structure implementation, memory management, and reusable C++ code.
+A reusable and generic **C++ Data Structures Library** built using
+**Object-Oriented Programming (OOP)** and **C++ Templates**. The project
+provides implementations of commonly used linear and non-linear data
+structures along with searching and sorting algorithms.
 
-## Data Structures Implemented
+The main goal of this project is to build a modular, reusable library
+that can work with different data types and can be integrated into
+client applications.
 
-* Singly Linear Linked List
-* Singly Circular Linked List
-* Doubly Linear Linked List
-* Doubly Circular Linked List
-* Stack (LIFO – Last In, First Out)
-* Queue (FIFO – First In, First Out)
+## 📌 Project Overview
 
-## Features
+This project implements fundamental data structures in a generic and
+reusable way using C++ templates.
 
-* Object-oriented implementation
-* Dynamic memory management
-* Pointer-based data structures
-* Reusable and modular code
-* Implementation of common data structure operations
+The library focuses on:
 
-## Technologies Used
+-   Object-Oriented Programming
+-   Generic Programming using Templates
+-   Linear and Non-Linear Data Structures
+-   Searching and Sorting Algorithms
+-   Dynamic Memory Management
+-   Reusable and Modular Software Design
 
-* **Language:** C++
-* **Concepts:** Data Structures, OOP, Pointers, Dynamic Memory Allocation
-* **Compiler:** GCC / G++
+The same data structure implementation can be used with different data
+types such as `int`, `float`, `string`, and user-defined/custom objects.
 
-## Project Structure
+------------------------------------------------------------------------
 
-```text
+## 🚀 Features
+
+### Linear Data Structures
+
+-   Singly Linear Linked List
+-   Singly Circular Linked List
+-   Doubly Linear Linked List
+-   Doubly Circular Linked List
+-   Stack (LIFO)
+-   Queue (FIFO)
+
+### Non-Linear Data Structures
+
+-   Binary Search Tree (BST)
+    -   Insertion
+    -   Deletion
+    -   Traversal operations
+
+### Searching Algorithms
+
+-   Linear Search
+-   Binary Search
+
+### Sorting Algorithms
+
+-   Bubble Sort
+-   Selection Sort
+-   Insertion Sort
+
+### Generic Implementation
+
+The library uses **C++ Templates** to provide data-type-independent
+implementations.
+
+Example:
+
+``` cpp
+SinglyLL<int> obj;
+SinglyLL<float> obj;
+SinglyLL<string> obj;
+```
+
+This approach avoids writing separate implementations for different data
+types.
+
+------------------------------------------------------------------------
+
+## 🛠️ Technologies Used
+
+  Technology       Purpose
+  ---------------- ---------------------------------------------------
+  C++              Core programming language
+  OOP              Encapsulation, classes and reusable design
+  C++ Templates    Generic programming
+  Pointers         Dynamic data structure implementation
+  Dynamic Memory   Runtime memory management
+  STL Concepts     Understanding of standard data structure concepts
+  Git & GitHub     Version control and project hosting
+
+------------------------------------------------------------------------
+
+## 🧠 Concepts Demonstrated
+
+This project demonstrates practical understanding of:
+
+-   Classes and Objects
+-   Constructors
+-   Encapsulation
+-   Access Specifiers
+-   Function Overloading
+-   Templates
+-   Pointers
+-   Dynamic Memory Allocation
+-   Linked Lists
+-   Stack and Queue
+-   Trees
+-   Searching
+-   Sorting
+-   Modular and reusable code design
+
+------------------------------------------------------------------------
+
+## 📂 Project Structure
+
+A clean organization for the library is:
+
+``` text
 Generalised-Data-Structures-Library/
 │
-├── include/          # Header files
-├── src/              # Source files
-├── examples/         # Example programs
+├── README.md
+├── LICENSE
 │
-├── README.md         # Project documentation
-└── .gitignore        # Git ignored files
+├── include/
+│   └── Data Structure Header Files
+│
+├── src/
+│   └── Data Structure Implementations
+│
+└── examples/
+    └── Client / Demonstration Programs
 ```
 
-## How to Run
+> The exact file organization may vary according to the implementation
+> in the repository.
 
-### Prerequisites
+------------------------------------------------------------------------
 
-Make sure a C++ compiler such as **G++** is installed on your system.
+## ⚙️ How to Run
 
-Check the compiler:
+### 1. Clone the Repository
 
-```bash
-g++ --version
-```
-
-### Clone the Repository
-
-```bash
+``` bash
 git clone https://github.com/Yashec21/Generalised-Data-Structures-Library.git
 ```
 
-### Navigate to the Project
+### 2. Open the Project
 
-```bash
+``` bash
 cd Generalised-Data-Structures-Library
 ```
 
-### Compile
+### 3. Compile a C++ Client Program
 
-If the project uses the `src`, `include`, and `examples` structure:
+Using `g++`:
 
-```bash
-g++ examples/main.cpp src/*.cpp -I include -o main
+``` bash
+g++ -std=c++17 <source-file>.cpp -o program
 ```
 
-### Run
+### 4. Run
 
-**Windows:**
+On Windows:
 
-```bash
-main.exe
+``` bash
+program.exe
 ```
 
-**Linux/macOS:**
+On Linux/macOS:
 
-```bash
-./main
+``` bash
+./program
 ```
 
-> The compilation command may vary depending on the project structure and source file names.
+> Use the source/example file available in the repository when
+> compiling.
 
-## Example
+------------------------------------------------------------------------
 
-A simple example of using a stack:
+## 💡 Generic Programming Example
 
-```cpp
-Stack<int> stack;
+A major feature of this project is the use of templates.
 
-stack.Push(10);
-stack.Push(20);
-stack.Push(30);
-
-stack.Display();
+``` cpp
+template <class T>
+class Node
+{
+    public:
+        T data;
+        Node<T> *next;
+};
 ```
 
-## Purpose
+The same structure can then be used with different data types:
 
-The purpose of this project is to strengthen the understanding of fundamental data structures and their implementation in C++.
+``` cpp
+Node<int> intNode;
+Node<float> floatNode;
+Node<string> stringNode;
+```
 
-It also provides practical experience with:
+This makes the implementation reusable and reduces duplicate code.
 
-* Pointers and dynamic memory
-* Object-oriented programming
-* Data structure operations
-* Code organization
-* Git and GitHub
+------------------------------------------------------------------------
 
-## Learning Outcomes
+## 📚 Data Structures
 
-Through this project, I gained practical experience in:
+### 1. Singly Linear Linked List
 
-* Implementing linear data structures from scratch
-* Managing dynamically allocated memory
-* Understanding pointer-based structures
-* Applying object-oriented programming concepts
-* Organizing a C++ project
-* Using Git for version control and GitHub for project management
+A linear linked list where every node contains data and a pointer to the
+next node.
 
-## Future Improvements
+### 2. Singly Circular Linked List
 
-* Add non-linear data structures such as trees and graphs
-* Add unit testing
-* Add CMake build support
-* Improve documentation and examples
+A linked list in which the last node points back to the first node.
 
-## Author
+### 3. Doubly Linear Linked List
+
+Each node maintains links to both the previous and next nodes.
+
+### 4. Doubly Circular Linked List
+
+A doubly linked list where the last node is connected to the first node
+and vice versa.
+
+### 5. Stack
+
+A LIFO (Last In, First Out) data structure.
+
+### 6. Queue
+
+A FIFO (First In, First Out) data structure.
+
+### 7. Binary Search Tree
+
+A non-linear data structure supporting operations such as insertion,
+deletion and traversal.
+
+------------------------------------------------------------------------
+
+## 🔎 Searching Algorithms
+
+The library includes fundamental searching techniques such as:
+
+-   **Linear Search** -- sequentially checks elements.
+-   **Binary Search** -- searches efficiently in sorted data by
+    repeatedly dividing the search range.
+
+------------------------------------------------------------------------
+
+## 🔃 Sorting Algorithms
+
+The project includes:
+
+-   **Bubble Sort**
+-   **Selection Sort**
+-   **Insertion Sort**
+
+These algorithms demonstrate the implementation and understanding of
+fundamental sorting techniques.
+
+------------------------------------------------------------------------
+
+## 🎯 Learning Outcomes
+
+By working on this project, the following skills are demonstrated:
+
+-   Strong foundation in linear and non-linear data structures
+-   Practical understanding of C++ OOP principles
+-   Generic programming using templates
+-   Understanding of searching and sorting algorithms
+-   Dynamic memory and pointer-based implementation
+-   Designing reusable and modular software components
+-   Building a reusable C++ library for client applications
+
+------------------------------------------------------------------------
+
+## 🏗️ Project Objective
+
+The objective of this project is not only to implement individual data
+structures, but also to organize them as a **reusable generic library**.
+
+The design focuses on:
+
+``` text
+Generic Implementation
+        ↓
+Object-Oriented Design
+        ↓
+Reusable Data Structures
+        ↓
+Searching & Sorting Algorithms
+        ↓
+Client Application Integration
+```
+
+------------------------------------------------------------------------
+
+## 💼 Why This Project?
+
+This project was developed to strengthen practical understanding of:
+
+-   Data Structures
+-   Algorithms
+-   C++ Programming
+-   OOP
+-   Generic Programming
+-   Memory Management
+-   Reusable Software Design
+
+It is especially useful for understanding how commonly used data
+structures can be implemented from scratch instead of relying only on
+ready-made library implementations.
+
+------------------------------------------------------------------------
+
+## 🎤 Interview Explanation
+
+> I developed a Generalised Data Structures Library in C++ that provides
+> generic and object-oriented implementations of linear and non-linear
+> data structures such as linked lists, stacks, queues and binary search
+> trees. I also implemented fundamental searching and sorting
+> algorithms. I used C++ templates so that the same implementation can
+> work with different data types. The main goal was to create a reusable
+> and modular library that can be integrated with client applications.
+
+------------------------------------------------------------------------
+
+## 🔮 Future Enhancements
+
+Possible improvements include:
+
+-   Adding more non-linear data structures
+-   Adding more searching and sorting algorithms
+-   Improving error handling
+-   Adding automated test cases
+-   Adding detailed API documentation
+-   Adding performance and complexity analysis
+-   Providing more client-side demonstration programs
+
+------------------------------------------------------------------------
+
+## 📄 License
+
+This project is available under the **MIT License**.
+
+See the [LICENSE](LICENSE) file for details.
+
+------------------------------------------------------------------------
+
+## 👨‍💻 Author
 
 **Yash Patil**
 
-GitHub: [Yashec21](https://github.com/Yashec21)
+-   GitHub: [Yashec21](https://github.com/Yashec21)
+-   LinkedIn: [Yash Patil](https://www.linkedin.com/in/yashpatilec/)
 
-LinkedIn: [Yash Patil](https://www.linkedin.com/in/yashpatilec/)
+------------------------------------------------------------------------
+
+## ⭐ Support
+
+If you find this project useful for learning C++, Data Structures or
+OOP, consider giving the repository a ⭐ on GitHub.
